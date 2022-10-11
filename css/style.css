@@ -1,0 +1,142 @@
+header a{
+    margin: 10px;
+}
+
+#painting{
+    border: solid ;
+    border-width: 50px;
+    max-width: 450px;
+    overflow: hidden;
+    z-index: 1;
+    position: fixed;
+}
+
+#cornerTL{
+    margin-left: -2px;
+}
+
+#cornerTL a{
+    border-top: 0px solid transparent;
+    border-bottom: 200px solid transparent;
+    border-left: 203px solid gray;
+  }
+
+#black{
+    margin-top: 183px;
+    margin-left: -50px;
+}
+
+#black a{
+    border-top: 200px solid transparent;
+    border-bottom: 200px solid transparent;
+    border-right: 250px solid black;
+}
+
+#yellow{
+    margin-top: 80px;
+    margin-left: -1px;
+}
+
+#yellow a{ 
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    border-left: 100px solid rgb(231, 194, 106);
+}
+
+#bottomGrey{
+    margin-top: -36px;
+    margin-left: -1px;
+    margin-bottom: 117px;
+}
+
+#bottomGrey a{
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 120px solid gray;
+}
+
+#middleLight{
+    float: right;
+    margin-right: 100px;
+    margin-top: -325px;
+}
+
+#middleLight a{ 
+    border-top: 125px solid transparent;
+    border-bottom: 150px solid transparent;
+    border-left: 150px solid lightgray;
+}
+
+#bottomM{
+    float: right;
+    margin-top: -15px;
+    margin-right: 75px;
+}
+
+#bottomM a{ 
+    border-top: 175px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-left: 200px solid grey;
+}
+
+#rightGrey{
+    float: right;
+    margin-top: -321px;
+    margin-right: 12px;
+}
+
+#rightGrey a{
+    border-left: 100px solid transparent;
+    border-right:100px solid transparent;
+    border-top: 100px solid grey;
+}
+
+#red{
+    float: right;
+    margin-top: -185px;
+    margin-right: -1px;
+}
+
+#red a{
+    border-top: 250px solid transparent;
+    border-bottom: 250px solid transparent;
+    border-right: 251px solid red;
+}
+
+#anime #painting:hover{
+    border-color: blue;  
+    animation-name: color-loop;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes color-loop {
+    0%   {border-color: red; }
+    25%  {border-color: yellow; }
+    50%  {border-color: blue; }
+    75%  {border-color: green; }
+    100% {border-color: red; }
+}
+
+img{
+    width: 100px;
+    opacity: 0;
+    padding: 50px;
+    z-index: 2;
+}
+
+#anime:hover img{
+    opacity: 100;
+    position: relative;
+    animation: dvd 8s;
+    animation-iteration-count: infinite;
+    filter: invert(100%);
+}
+
+@keyframes dvd {
+    0%   {left: 100px; top: 0px; }
+    25%  {left: 300px; top: 370px;}
+    50%  {left: 350px; top: 300px;}
+    75%  {left: 0px; top: 100px;}
+    100% {left: 100px; top: 0px;}
+}
